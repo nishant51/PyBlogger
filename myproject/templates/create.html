@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<form method="post" >
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- render form fields as paragraphs -->
+    <button type="submit">Post</button>
+    <button><a href="{% url 'home' %}">-Go Back</a></button>
+</form>
+
+{% endblock %}
