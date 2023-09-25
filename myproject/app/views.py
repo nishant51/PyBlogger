@@ -93,7 +93,7 @@ def register(request):
     form = Createuserform()
     if request.method == 'POST':
         form = Createuserform(request.POST)
-        if form.is_valid:
+        if form.is_valid():
             form.save()
             user=form.cleaned_data.get('username')
             messages.success(request,'Account was created sucessfully' + user)
