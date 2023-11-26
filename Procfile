@@ -1,1 +1,1 @@
-web: gunicorn 'PyBlogger.wsgi'
+web: gunicorn myproject.wsgi
